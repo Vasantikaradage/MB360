@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fitness_graph"
+    app:startDestination="@id/fitnessHomeFragment">
+
+    <fragment
+        android:id="@+id/fitnessHomeFragment"
+        android:name="com.csform.android.MB360.fitness.FitnessHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fitness_home_fragment" />
+
+    <fragment
+        android:id="@+id/fitnessProfileFragment"
+        android:name="com.csform.android.MB360.fitness.ProfileScreenData.FitnessProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_fitness_profile" />
+    <fragment
+        android:id="@+id/fitnessCompleteFragment"
+        android:name="com.csform.android.MB360.fitness.FitnessCompeteFragment"
+        android:label="Compete"
+        tools:layout="@layout/fragment_fitness_complete" />
+    <fragment
+        android:id="@+id/fitnessRewardsFragment"
+        android:name="com.csform.android.MB360.fitness.FitnessRewardsFragment"
+        android:label="Rewards"
+        tools:layout="@layout/fragment_fitness_rewards" />
+    <fragment
+        android:id="@+id/fitnessStatsFragment"
+        android:name="com.csform.android.MB360.fitness.StatsScreenData.FitnessStatsFragment"
+        android:label="Stats"
+        tools:layout="@layout/fragment_fitness_stats" />
+
+    <fragment
+        android:id="@+id/connect_app_fragment"
+        android:name="com.csform.android.MB360.fitness.ConnectedDeviceFragment"
+        android:label="Connect Device"
+        tools:layout="@layout/fragment_connected_apps" />
+    <fragment
+        android:id="@+id/improve_aktivo_score"
+        android:name="com.csform.android.MB360.fitness.ImproveAktivoScoreFragment"
+        android:label="Improve Aktivo Score"
+        tools:layout="@layout/improve_aktivo_score" />
+
+    <fragment
+        android:id="@+id/help_fragment"
+        android:name="com.csform.android.MB360.fitness.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/privacy_policy_fragment"
+        android:name="com.csform.android.MB360.fitness.PrivacyPolicyFragment"
+        android:label="Privacy Policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+
+
+</navigation>

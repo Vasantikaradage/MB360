@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wellness.DentalPackagesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/coupon_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_size_6"
+            app:cardBackgroundColor="@color/title_back_wellness_v2"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/greendarkbg1"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_margin="@dimen/material_size_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/material_size_12"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/material_size_6"
+                    android:text="Flat 10% discount and Priority access is applicable on any treatment you avail at the clinics when booked through MyBenefits360"
+                    android:textColor="@color/greendarkbg1"
+                    app:drawableStartCompat="@drawable/ic_alert_wellness" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.todkars.shimmer.ShimmerRecyclerView
+            android:id="@+id/dental_package_cycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coupon_layout"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:shimmer_recycler_layout="@layout/shimmer_item_dental_package"
+            tools:listitem="@layout/item_dental_package" />
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

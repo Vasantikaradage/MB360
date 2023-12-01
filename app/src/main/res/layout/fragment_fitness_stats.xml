@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.csform.android.MB360.fitness.StatsScreenData.FitnessStatsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="WebViewLayout">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_Stats"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
+            app:tabBackground="@drawable/aktivo_tabs"
+            app:tabGravity="fill"
+            app:tabPaddingStart="10dp"
+            app:tabPaddingEnd="10dp"
+            app:tabIndicatorHeight="0sp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/cpb_white"
+            app:tabTextAppearance="@style/TextInputAppearance"
+            app:tabTextColor="@color/cpb_black" />
+
+        <WebView
+            android:id="@+id/networkScore"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/cardLeftMargin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/networkScore_commentary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/networkScore"
+            android:fontFamily="@font/setpoppins"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:padding="@dimen/cardLeftMargin"
+            android:text="@string/aktivo_stats_score_commentary"
+            android:textColor="@color/cpb_black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/networkScore"
+            android:fontFamily="@font/setpoppins"
+            android:padding="@dimen/cardMargin"
+            android:text="Week"
+            android:textColor="@color/cpb_black" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/scrollWeek"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabBackground="@drawable/aktivo_tabs"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0sp"
+            app:tabMode="scrollable"
+            app:tabPaddingStart="10dp"
+            android:layout_marginStart="10dp"
+            app:tabPaddingEnd="10dp"
+            app:tabSelectedTextColor="@color/cpb_white"
+            app:tabTextAppearance="@style/TextInputAppearance"
+            app:tabTextColor="@color/cpb_black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/week_dates"
+            android:text="15 sep - 22 Sep"
+            android:textColor="@color/cpb_black"
+            android:fontFamily="@font/setpoppins"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/scrollWeek"    />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/networkScore"
+            android:fontFamily="@font/setpoppins"
+            android:padding="@dimen/cardMargin"
+            android:text="Month"
+            android:textColor="@color/cpb_black" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/scrollMonth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabBackground="@drawable/aktivo_tabs"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0sp"
+            app:tabMode="scrollable"
+            app:tabPaddingStart="10dp"
+            app:tabPaddingEnd="10dp"
+            android:layout_marginStart="10dp"
+            app:tabSelectedTextColor="@color/cpb_white"
+            app:tabTextAppearance="@style/TextInputAppearance"
+            app:tabTextColor="@color/cpb_black" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_Chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/scrollMonth"
+            android:layout_margin="@dimen/cardMargin" />
+
+    </LinearLayout>
+</ScrollView>

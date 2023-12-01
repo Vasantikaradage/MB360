@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spnText"
+    style="?android:attr/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/setpoppins"
+    android:layout_marginBottom="@dimen/cardMargin"
+    android:layout_marginLeft="@dimen/cardMargin"
+    android:layout_marginRight="@dimen/cardMargin"
+    android:gravity="center"
+    android:maxLines="10"
+    android:padding="@dimen/cardMargin"
+    android:text="EMPLOYEE"
+    android:textSize="@dimen/mediumTextSize" />

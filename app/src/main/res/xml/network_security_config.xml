@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">aibemployeebenefits.in</domain>
+        <domain includeSubdomains="true">wellness.mybenefits360.com</domain>
+        <domain includeSubdomains="true">marsh.mybenefits360.com</domain>
+        <domain includeSubdomains="true">mybenefits360.com</domain>
+        <pin-set expiration="2024-01-16">
+            <pin digest="SHA-256">hmASn+xDTVHu9w0zvEm4/YnQlS6sxscouLLJNctgRJY=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>
+
+
+
+
+

@@ -1,0 +1,86 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="5dp"
+    app:cardBackgroundColor="#EEF1F6"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <RelativeLayout
+        android:id="@+id/item_utilities_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/item_utilities_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/cardLeftMargin"
+            android:contentDescription="@string/utilities_icon"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/item_utilities_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/material_size_4"
+            android:layout_marginStart="@dimen/titleCardCornerRadius"
+            android:layout_toEndOf="@id/item_utilities_icon"
+            android:autoSizeMaxTextSize="15sp"
+            android:singleLine="true"
+            android:layout_marginEnd="70dp"
+            android:autoSizeMinTextSize="11sp"
+            android:fontFamily="@font/setpoppins_medium"
+            android:textColor="@color/file_name_textcolor"
+            tools:text="ANNEXURE_A" />
+
+      <!--  <ImageView
+            android:id="@+id/item_utilities_download"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:contentDescription="@string/utilities_icon"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_by_download" />
+
+        <ProgressBar
+            android:id="@+id/item_download_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:indeterminateTint="@color/primary_variant"
+            android:visibility="gone"
+            tools:visibility="visible" />-->
+
+
+        <TextView
+            android:id="@+id/item_utilities_download"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:textColor="#007BFF"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/utilities_icon"
+           android:text="@string/view"
+            android:fontFamily="@font/setpoppins"
+            app:drawableBottomCompat="@drawable/underline" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

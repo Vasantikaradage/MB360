@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/material_size_4"
+    app:cardBackgroundColor="#F8F9FB"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:layout_margin="10dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#CCD5E4"
+    app:strokeWidth="1dp">
+
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_size_4"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@id/item_dependant_relation"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="@dimen/material_size_6"
+            android:src="@drawable/ic_by_user" />
+
+        <TextView
+            android:id="@+id/item_dependant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/user_image"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Lorem ipsum"
+            android:layout_marginEnd="50dp"
+            android:singleLine="true"
+            android:textColor="@color/error_text_color"
+
+            android:textSize="@dimen/material_size_14" />
+
+        <TextView
+            android:id="@+id/item_dependant_relation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_dependant_name"
+            android:layout_toEndOf="@id/user_image"
+            android:fontFamily="@font/setpoppins_medium"
+            android:includeFontPadding="false"
+            android:text="Employee"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <RadioButton
+            android:id="@+id/dependant_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/item_dependant_name"
+            android:layout_alignParentEnd="true" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cliam_no_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/card_corner_radius"
+            android:layout_marginVertical="@dimen/card_corner_radius"
+            app:cardBackgroundColor="#EE3D8B"
+            app:cardCornerRadius="@dimen/material_size_8"
+            android:layout_below="@+id/dependant_radio_btn"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/material_size_4"
+                android:layout_marginVertical="@dimen/material_size_2"
+                android:layout_gravity="start"
+                android:gravity="start"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/material_size_2">
+
+                <TextView
+                    android:id="@+id/tv_intimation_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="Claim No. #000000000"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:id="@+id/item_secondary_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cliam_no_layout"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/material_size_8"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/divider_coverage"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/dependant_radio_btn"
+                    android:layout_marginHorizontal="3dp"
+                    android:background="#CDD3DD" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/item_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="Age : 20 years"
+                        android:textColor="@color/error_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_dob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="DOB : 01-Jan-2003"
+                        android:textColor="@color/error_text_color"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/item_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="Gender : 20 years"
+                        android:textColor="@color/error_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="Mob : 01-Jan-2003"
+                        android:textColor="@color/error_text_color"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

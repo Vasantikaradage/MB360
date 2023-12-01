@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:animateLayoutChanges="true"
+    android:minHeight="100dp"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/bg_row_background"
+        android:minHeight="100dp">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_trash" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/delete_icon"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Delete"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="100dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                shimmer:layout_constraintEnd_toEndOf="parent"
+                shimmer:layout_constraintStart_toStartOf="parent"
+                shimmer:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/txtName"
+                    android:layout_width="150dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/material_size_12"
+                    android:layout_marginTop="@dimen/material_size_12"
+                    android:background="@color/light_grey"
+                    shimmer:layout_constraintStart_toStartOf="parent"
+                    shimmer:layout_constraintTop_toTopOf="parent"
+                    tools:text="Chinamutu Swami swayambhu swamiiyyer namefield" />
+
+                <TextView
+                    android:id="@+id/tv_packagenameorangeback"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_pricetag"
+                    android:visibility="gone"
+                    shimmer:layout_constraintEnd_toEndOf="parent"
+                    shimmer:layout_constraintTop_toTopOf="parent"
+                    tools:text="orange" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                shimmer:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <View
+                    android:id="@+id/txtRelations"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/light_grey"
+                    shimmer:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp"
+                    tools:text="Grant Father" />
+
+                <View
+                    android:id="@+id/txtage"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/light_grey"
+                    shimmer:layout_constraintStart_toEndOf="@+id/txtRelations"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp"
+                    tools:text="(70years)" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:id="@+id/tv_packagedetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:gravity="center_vertical"
+                android:text="View Package Details +"
+                android:textSize="13sp"
+                android:transitionName="Package"
+                android:visibility="gone"
+                tools:text="PackageDetails" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/cardMargin"
+                android:layout_marginRight="7dp"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="Schedule Now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                fontPath="font/poppins_medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:inputType="textCapWords"
+                android:text="Scheduled"
+                android:textColor="@color/schedulecolor"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btnSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/color_grey" />
+
+            <RelativeLayout
+                android:id="@+id/llSelectDependant"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/actionText"
+                    fontPath="font/poppins_medium.ttf"
+                    android:layout_width="120dp"
+                    android:layout_height="24dp"
+                    android:background="@color/light_grey"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/material_size_24"
+                    android:layout_height="@dimen/material_size_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:foregroundGravity="right"
+                    android:rotation="180"
+                    android:src="@drawable/back"
+                    android:tint="@color/greendarkbg1"
+                    app:tint="@color/light_grey" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkedRadio"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/light_grey"
+        android:buttonTint="@color/light_grey"
+        android:clickable="false"
+        android:drawableTint="@color/light_grey"
+        android:focusable="false" />
+
+</RelativeLayout>

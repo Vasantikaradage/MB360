@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:paddingTop="20dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/cardMargin"
+            android:background="@color/white"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:padding="@dimen/cardMargin"
+                android:visibility="gone">
+
+               <!-- <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/cardTopMargin"
+                    android:src="@drawable/user_male"
+                    app:civ_border_color="@color/light_grey"
+                    app:civ_border_width="2dp" />
+-->
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardLeftMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Mr. Subramaniam Rahul Chinnaswamy"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/utilites"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logoutImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins"
+                    android:src="@android:drawable/ic_lock_power_off" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:gravity="left"
+                    android:text="Logout"
+                    android:textColor="@color/cont_grey"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_back_color" />
+
+
+            <LinearLayout
+                android:id="@+id/llConnectedDevices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginTop="@dimen/cardLeftMargin"
+                android:background="@drawable/ripple_effect_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:src="@drawable/wearablewatch"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:gravity="left"
+                    android:text="Connected Apps"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginTop="@dimen/cardLeftMargin"
+                android:background="@drawable/ripple_effect_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:src="@drawable/aktivoscoreimg"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:gravity="left"
+                    android:includeFontPadding="false"
+                    android:text="Improve you Aktivo Score"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llGoHome_fitness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginTop="@dimen/cardLeftMargin"
+                android:background="@drawable/ripple_effect_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imghome"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:src="@drawable/iconsquestion"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:gravity="left"
+                    android:text="Help"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/privPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginTop="@dimen/cardLeftMargin"
+                android:background="@drawable/ripple_effect_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/textSize"
+                    app:srcCompat="@drawable/icons_lock" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:gravity="left"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fitness.ProfileScreenData.FitnessProfileFragment"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/cardMargin"
+        android:paddingRight="@dimen/cardMargin">
+
+        <!--<ImageView
+            android:id="@+id/userImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:src="@drawable/user_male"
+            app:civ_border_color="@color/light_grey"
+            android:visibility="gone"
+            app:civ_border_width="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/setpoppinssemibold"
+            android:text="NAME"
+            android:visibility="gone"
+            android:textColor="@color/cpb_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:textStyle="bold"
+                android:text="@string/fname"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_FirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardRightMargin"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="ABC"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/lname"
+                android:textColor="@color/cpb_black"
+                android:textStyle="bold"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_LastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="XYZ"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/sex"
+                android:textStyle="bold"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintBottom_toBottomOf="@id/txt_Gender"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_Gender" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="MALE"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/titleSex" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderGL"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7"/>
+
+            <LinearLayout
+                android:id="@+id/swtchGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switch_border_black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/layoutPadding"
+                android:weightSum="4"
+                app:layout_constraintLeft_toRightOf="@id/genderGL"
+                app:layout_constraintBottom_toBottomOf="@id/txt_Gender"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txt_Gender">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/blank_rounded_background"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="center"
+                    android:text="F"
+                    android:textColor="@color/statuspaidlight" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/switch_border_black"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="right|center"
+                    android:paddingRight="@dimen/cardMargin"
+                    android:text="M"
+                    android:textColor="@color/statuspaidlight" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/cpb_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/swtchGender" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/pnumber"
+                android:textColor="@color/cpb_black"
+                android:textStyle="bold"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Cellphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="9865321470"
+                android:textSize="@dimen/mediumTextSize"
+                android:textColor="@color/cpb_black"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/dobCaps"
+                android:textColor="@color/cpb_black"
+                android:textStyle="bold"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="1900-01-01"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/height"
+                android:textStyle="bold"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintBottom_toBottomOf="@id/txtHeight"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtHeight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="180"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/titleHeight" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heighGL"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7"/>
+
+            <RelativeLayout
+                android:id="@+id/swtchHeight"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toRightOf="@id/heighGL"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switch_border_black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/layoutPadding"
+                android:weightSum="4"
+                app:layout_constraintBottom_toBottomOf="@id/txtHeight"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtHeight">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_cm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blank_rounded_background"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="right|center"
+                    android:paddingLeft="@dimen/cardMargin"
+                    android:paddingRight="@dimen/cardMargin"
+                    android:text="FT"
+                    android:textColor="@color/statuspaidlight" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_FT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/switch_border_black"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="right|center"
+                    android:paddingRight="@dimen/cardMargin"
+                    android:text="CM"
+                    android:textColor="@color/statuspaidlight" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/cpb_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/swtchHeight" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/weight"
+                android:textStyle="bold"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintBottom_toBottomOf="@id/txtWeight"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtWeight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/setpoppins"
+                android:text="210"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/titleWeight" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightGl"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7"/>
+
+            <RelativeLayout
+                android:id="@+id/swtchweight"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toRightOf="@id/weightGl"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switch_border_black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/layoutPadding"
+                android:weightSum="4"
+                app:layout_constraintBottom_toBottomOf="@id/txtWeight"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtWeight">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blank_rounded_background"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="right|center"
+                    android:paddingLeft="@dimen/cardMargin"
+                    android:paddingRight="@dimen/cardMargin"
+                    android:text="LBS"
+                    android:textColor="@color/statuspaidlight" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_lbs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/switch_border_black"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:gravity="right|center"
+                    android:paddingRight="@dimen/cardMargin"
+                    android:text="KG"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/cpb_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/swtchweight" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/bedtime"
+                android:textStyle="bold"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:background="@color/transparent"
+                android:textColor="@color/cpb_black"
+                android:fontFamily="@font/setpoppins"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/wakeup"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/smallTextSize"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/waketime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:background="@color/transparent"
+                android:textColor="@color/cpb_black"
+
+                android:fontFamily="@font/setpoppins"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="@string/cig_question"
+            android:textColor="@color/cpb_black"
+            android:textSize="@dimen/smallTextSize"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spn_Ciggarettes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:fontFamily="@font/setpoppins"
+            android:textSize="@dimen/largeTextSize"
+            android:background="@color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="@string/drink_que"
+            android:textColor="@color/cpb_black"
+            android:textSize="@dimen/smallTextSize"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="0 Drinks"
+            android:id="@+id/spnDrinks"
+            android:textColor="@color/cpb_black"
+            android:textSize="@dimen/largeTextSize"
+            android:background="@color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/cpb_black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stats_count"
+            android:layout_margin="@dimen/cardMargin"
+            android:textColor="@color/white"
+            android:id="@+id/btnSave"
+            android:text="Submit"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

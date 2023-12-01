@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Compete" android:icon="@drawable/ic_compete" android:id="@+id/fitnessCompleteFragment" app:showAsAction="withText"/>
+    <item android:title="Rewards" android:icon="@drawable/rewards" android:id="@+id/fitnessRewardsFragment" app:showAsAction="withText" />
+    <item android:title="" />
+    <item android:title="Stats" android:icon="@drawable/stats" android:id="@+id/fitnessStatsFragment" app:showAsAction="withText"/>
+    <item android:title="Profile" android:icon="@drawable/greyprofile" android:id="@+id/fitnessProfileFragment" app:showAsAction="withText" />
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/connect_app_fragment"
+        android:icon="@drawable/wearablewatch"
+        android:title="Connected Apps"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/improve_aktivo_score"
+        android:icon="@drawable/aktivoscoreimg"
+        android:title="Improve you Aktivo Score"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/help_fragment"
+        android:icon="@drawable/iconsquestion"
+        android:title="Help"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/privacy_policy_fragment"
+        android:icon="@drawable/icons_lock"
+        android:title="Privacy Policy"
+        app:showAsAction="withText" />
+
+</menu>

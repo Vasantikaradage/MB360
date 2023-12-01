@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swplayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.csform.android.MB360.fitness.FitnessHomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aktivo_background">
+
+
+            <include
+                android:id="@+id/title_menu"
+                layout="@layout/title_menu_layout" />
+
+            <LinearLayout
+                android:id="@+id/aktivoScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardMargin"
+                android:layout_marginRight="@dimen/cardMargin"
+                android:layout_marginBottom="@dimen/cardMargin"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_menu">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/dot_shape_round">
+
+
+                    <com.csform.android.MB360.fitness.utils.CircularProgressBar
+                        android:id="@+id/cirlce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/cardTopMargin"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/btn_height"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/GIFimage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:scaleType="fitCenter"
+
+                        android:src="@drawable/loader" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/poppins"
+                        android:includeFontPadding="false"
+                        android:text="@string/aktivo_title"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/textSize" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/aktivo_title2"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/textSize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLearnMore_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:background="@drawable/aktivo_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/cardMargin"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/bulb"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Learn More"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/textSize" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/fitness_right_arrow"
+
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtScoreMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/left_margin"
+                    android:layout_marginTop="@dimen/left_margin"
+                    android:layout_marginRight="@dimen/left_margin"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/aktivo_commentary"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:fontFamily="@font/poppins"
+                    android:text="Improve Your Aktivo Scrore:"
+                    android:textSize="@dimen/textSize"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/single_badge"
+                    layout="@layout/single_badge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sedandExe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/cardMargin"
+                android:paddingTop="@dimen/cardMargin"
+                android:paddingRight="@dimen/cardMargin"
+                android:weightSum="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aktivoScore">
+
+                <LinearLayout
+                    android:id="@+id/ll_sedentary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/fitness_buttons"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/sedenary"
+                        android:layout_width="@dimen/fitness_icon_size"
+                        android:layout_height="@dimen/fitness_icon_size"
+                        app:srcCompat="@drawable/sedentary" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_sedentary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="@string/sedentary"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_exercise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/fitness_buttons_inactive"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExercise"
+                        android:layout_width="@dimen/fitness_icon_size"
+                        android:layout_height="@dimen/fitness_icon_size"
+                        app:srcCompat="@drawable/ic_exercise_white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_exercise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="@string/exercise"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sleepandsteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:paddingLeft="@dimen/cardMargin"
+                android:paddingTop="@dimen/cardMargin"
+                android:paddingRight="@dimen/cardMargin"
+                android:weightSum="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sedandExe">
+
+                <LinearLayout
+                    android:id="@+id/llSleep"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/fitness_buttons_inactive"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_Sleep"
+                        android:layout_width="@dimen/fitness_icon_size"
+                        android:layout_height="@dimen/fitness_icon_size"
+                        app:srcCompat="@drawable/ic_sleep_white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_sleep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:text="@string/sleep"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_light_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/fitness_buttons_inactive"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgLightActivity"
+                        android:layout_width="@dimen/fitness_icon_size"
+                        android:layout_height="@dimen/fitness_icon_size"
+                        app:srcCompat="@drawable/ic_footprint" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_light_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:paddingLeft="@dimen/cardMargin"
+                        android:text="@string/activity"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/left_margin"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                android:weightSum="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgActivity">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/cardMargin"
+                    android:paddingRight="@dimen/cardMargin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/timeYest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:includeFontPadding="false"
+                        android:text="0 hrs 0 mins"
+                        android:textColor="@color/cpb_black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:background="@color/cpb_black" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Sleep Time Yesterday"
+                        android:textColor="@color/cpb_black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/cardMargin"
+                    android:paddingRight="@dimen/cardMargin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgArrow"
+                            android:layout_width="@dimen/cardTopMargin"
+                            android:layout_height="@dimen/cardTopMargin"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtImpact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/cardMargin"
+                            android:fontFamily="@font/poppins"
+                            android:includeFontPadding="false"
+                            android:text="Negative"
+                            android:textColor="@color/cpb_black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:background="@color/cpb_black" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppins"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/yest_impact"
+                        android:textColor="@color/cpb_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:background="@color/cpb_black"
+                app:layout_constraintLeft_toLeftOf="@id/workTime"
+                app:layout_constraintRight_toRightOf="@id/workTime"
+                app:layout_constraintTop_toBottomOf="@id/workTime" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="@dimen/left_margin"
+                android:layout_marginRight="@dimen/cardRightMargin"
+                android:background="@color/cpb_black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llDetails" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgActivity"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/left_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectedItem"
+                app:srcCompat="@drawable/ic_exercise_black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/workTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/left_margin"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:includeFontPadding="false"
+                android:text="0 hrs 0 mins"
+                android:textColor="@color/cpb_black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sleepandsteps" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/selectedItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:fontFamily="@font/setpoppins"
+                android:includeFontPadding="false"
+                android:text="Sleep Time Today"
+                android:textColor="@color/cpb_black"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v1" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llTeamScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/cardMargin"
+                android:background="@drawable/card_shadow"
+                app:layout_constraintTop_toBottomOf="@+id/v2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_title_back"
+                    android:fontFamily="@font/setpoppins"
+                    android:padding="@dimen/cardLeftMargin"
+                    android:paddingStart="45dp"
+                    android:text="Aktivo Score® Challenge"
+                    android:textColor="#e3e3e3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/titleImg"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    app:layout_constraintBottom_toBottomOf="@id/titleTxt"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/titleTxt"
+                    app:srcCompat="@drawable/award_white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleComp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/cardLeftMargin"
+                    android:text="@string/competitors"
+                    android:textColor="@color/cpb_black"
+
+                    app:layout_constraintTop_toBottomOf="@id/titleTxt" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTeamScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/titleComp"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/team_scores_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/v4"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:layout_marginRight="@dimen/cardRightMargin"
+                android:background="@color/cpb_black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llTeamScore" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:includeFontPadding="false"
+                android:text="Today:"
+
+                android:textColor="@color/cpb_black"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v4" />
+
+            <LinearLayout
+                android:id="@+id/clSleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtToday">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgSteps"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/cardMargin"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_footprint" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/step_unable"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="@dimen/mediumTextSize" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardMargin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clSleep" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/cardMargin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/moonlight" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/sleep_unable"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="@dimen/mediumTextSize" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

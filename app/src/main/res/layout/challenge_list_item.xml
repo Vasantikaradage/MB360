@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/cardMargin"
+    android:layout_marginRight="@dimen/cardMargin"
+    android:layout_marginBottom="@dimen/cardMargin"
+    android:id="@+id/llTeamChallenge"
+    android:foreground="@drawable/ripple_effect_white"
+    android:background="@drawable/challenge_cards"
+    android:padding="@dimen/cardMargin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/beach_runner"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/imgFitness"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/grey1"
+        android:id="@+id/v2"
+        android:layout_marginLeft="@dimen/cardMargin"
+        app:layout_constraintBottom_toBottomOf="@id/date_time"
+        app:layout_constraintLeft_toRightOf="@id/date_time"
+        app:layout_constraintTop_toTopOf="@id/date_time" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/challenge_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/setpoppins"
+        android:text="@string/challenge_name"
+        android:paddingLeft="@dimen/cardMargin"
+        android:textSize="@dimen/mediumTextSize"
+        android:textColor="@color/cpb_black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/challenge_type" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/fitness_icon_size"
+        android:layout_height="@dimen/fitness_icon_size"
+        app:layout_constraintTop_toTopOf="@id/date_time"
+        app:layout_constraintBottom_toBottomOf="@id/date_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/cardMargin"
+        android:id="@+id/calendarimg"
+        android:src="@drawable/ic_calendar_black"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/setpoppins"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:layout_marginLeft="@dimen/cardMargin"
+        android:layout_marginRight="@dimen/cardMargin"
+        android:text="@string/date_time"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintLeft_toRightOf="@id/calendarimg"
+        app:layout_constraintTop_toBottomOf="@id/challenge_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/challenge_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/setpoppins"
+        android:textColor="#4a86a0"
+        android:padding="@dimen/cardMargin"
+        android:text="@string/challenge_type"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFitness" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/fitness_icon_size"
+        android:layout_height="@dimen/fitness_icon_size"
+        android:src="@drawable/ic_profile"
+        android:id="@+id/ic_profile"
+        android:layout_marginLeft="@dimen/cardMargin"
+        app:layout_constraintLeft_toRightOf="@id/v2"
+        app:layout_constraintBottom_toBottomOf="@id/date_time"
+        app:layout_constraintTop_toTopOf="@id/date_time"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/enrollCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/setpoppins"
+        android:text="12"
+        android:layout_marginLeft="@dimen/cardMargin"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintLeft_toRightOf="@id/ic_profile"
+        app:layout_constraintTop_toTopOf="@id/date_time"
+        app:layout_constraintBottom_toBottomOf="@id/date_time"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEnrolled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cardMargin"
+        android:fontFamily="@font/setpoppins"
+        android:text="Enrolled!"
+        android:textColor="#04ab5b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enrollCount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "187145491213",
+    "project_id": "employee-benefits-360",
+    "storage_bucket": "employee-benefits-360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187145491213:android:52936746e9978d03bb5644",
+        "android_client_info": {
+          "package_name": "com.csform.android.MB360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187145491213-v1un7cccamnv9r2s40h6vub652jmp47c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.csform.android.MB360",
+            "certificate_hash": "0aab03d6ff878394ccb819dc9a9ac1af7bfc3153"
+          }
+        },
+        {
+          "client_id": "187145491213-0dnctinpdm6vr1q3baf70k9e4e67o1ah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwe9FJ4RImbh-M6_MB16FwS4ORjCV8yGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187145491213-0dnctinpdm6vr1q3baf70k9e4e67o1ah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

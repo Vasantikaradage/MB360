@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_background">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/next_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/material_size_14"
+            android:layout_marginVertical="@dimen/small_margin"
+            android:gravity="center"
+            app:cardBackgroundColor="@color/stroke_color"
+            app:cardCornerRadius="@dimen/material_size_8"
+            app:cardElevation="0dp">
+
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:layout_marginHorizontal="@dimen/material_size_12"
+                android:layout_marginVertical="@dimen/material_size_2"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Incomplete"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="@dimen/material_size_12"
+            android:layout_marginVertical="@dimen/defaultDayLabelVerticalPadding"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/cdu_rounded_corner"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:paddingRight="8dp"
+            android:text="Edit"
+            android:textColor="#007BFF" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginHorizontal="@dimen/material_size_14"
+        android:layout_weight="1"
+        android:fontFamily="@font/setpoppins"
+        android:text="00/00/000"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginHorizontal="@dimen/cardRightMargin"
+        android:layout_marginVertical="@dimen/material_size_8"
+        android:fontFamily="@font/setpoppins_medium"
+        android:text="Request #000000000"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/viewline1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvRequest"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/gray1" />
+
+    <TextView
+        android:id="@+id/tvDataFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewline1"
+        android:layout_marginHorizontal="@dimen/cardRightMargin"
+        android:layout_marginVertical="2dp"
+        android:fontFamily="@font/setpoppins_medium"
+        android:text="Claim Information"
+        android:textColor="#374151" />
+
+    <LinearLayout
+        android:id="@+id/claimInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDataFirst"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Type of claim"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_type_claim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="Pre-Hospitalisation"
+            android:textColor="#565656"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:layout_marginVertical="@dimen/material_size_4"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Claim Intimated"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_claim_intimated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="On MMB Portal"
+            android:textColor="#565656"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:layout_marginVertical="@dimen/material_size_4"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Claim Intimation No"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_claim_intimation_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="CLMI_CCG_DEMO"
+            android:textColor="#565656"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewline2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/claimInformation"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/gray1" />
+
+
+    <TextView
+        android:id="@+id/tvBeneficiaryInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewline2"
+        android:layout_marginHorizontal="@dimen/cardRightMargin"
+        android:layout_marginVertical="@dimen/material_size_4"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/setpoppins_medium"
+        android:text="Beneficiary Information"
+        android:textColor="#374151" />
+
+    <LinearLayout
+        android:id="@+id/linear_dependent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBeneficiaryInfo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:layout_marginVertical="@dimen/material_size_4"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Full Name"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_relation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:layout_marginVertical="@dimen/material_size_4"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Employee"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_years"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/cardRightMargin"
+            android:layout_marginVertical="@dimen/material_size_4"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="00/00/0000  (00 years)"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewline3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_dependent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/gray1" />
+
+    <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewline3">
+
+       <TextView
+            android:id="@+id/tvDocUploaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fitness_icon_size"
+           android:layout_marginTop="10dp"
+            android:text="Documents Uploaded"
+            android:textColor="#374151" />-->
+        <TextView
+            android:id="@+id/btnView"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewline3"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="@string/btn_view"
+            android:textAllCaps="false" />
+
+        <!--<TextView
+            android:id="@+id/btnView"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fitness_icon_size"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+           android:layout_gravity="center"
+            android:gravity="center"
+            android:text="View"
+            android:background="@drawable/cdu_rounded_corner"
+            android:textColor="#007BFF" />
+
+    </RelativeLayout>-->
+</RelativeLayout>
+

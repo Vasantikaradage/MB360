@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    tools:context=".insurance.claimdataupload.views.FileUploadFragmentCDU">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_and_attach_the_files"
+        android:textSize="18sp"
+        android:fontFamily="@font/setpoppins_medium"
+        android:textColor="@color/label_color"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_ensure_that_file_format_is_one_of_the_following_xls_slxs_doc_png_jpeg_pdf"
+        android:textSize="12sp"
+        android:fontFamily="@font/setpoppins_medium"
+        android:textColor="@color/error_text_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/setpoppins_medium"
+            android:text="Uploaded files should not be greater than 5MB"
+            android:textSize="12sp"
+            android:textColor="@color/error_text_color"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_file_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/beneficiaryHeader"
+
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="70dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_claims_file_upload"/>
+    </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/material_size_16"
+            android:visibility="gone"
+            android:layout_marginTop="120dp"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_error"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/folder_search"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/error_icon_color" />
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_error"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/error_text_color"
+                android:textSize="14sp"
+                android:text="No data found" />
+
+            <TextView
+                android:id="@+id/text_error_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_error"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="center"
+                android:textColor="@color/error_text_color"
+                android:textSize="12sp"
+                android:text="Please contact your HR or MB360 Ops. team for more information" />
+            <Button
+                android:id="@+id/got_to_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gradient_start"
+                android:fontFamily="@font/setpoppins_medium"
+                android:text="Back to home"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/text_error_details"
+
+                />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/primary_variant" />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
